@@ -1,0 +1,114 @@
+###
+# Inclusion des backends
+###
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:minisite/Configuration/PageTS/Mod/WebLayout/BackendLayouts/">
+
+# lib.navigation.main
+lib.navigation.main = COA
+lib.navigation.main{
+  1= HMENU
+  1{
+  
+    1 = TMENU
+    1 {
+        noBlur=1
+
+        wrap = <ul class="nav nav-stacked"><li class="nav-header">Navigation</li>|</ul>
+        NO {
+            wrapItemAndSub= <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Aller à la rubrique : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}" 
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+
+        }
+        ACT= 1
+        ACT {
+            wrapItemAndSub= <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Rubrique selectionée : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}" 
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+        }
+        CUR= 1
+        CUR {
+            wrapItemAndSub= <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Rubrique active : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}" 
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+        }
+        expAll=1
+    }
+  }
+}
+
+# lib.navigation.top
+lib.navigation.top = HMENU
+lib.navigation.top {
+  wrap = <ul class="nav navbar-nav">|</ul>
+  special = directory
+  special {
+      value = {$page.menu.topbar}
+  }
+  1 = TMENU
+  1 {
+    noBlur=1
+    NO = 1
+    NO {
+            wrapItemAndSub= <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Aller à la rubrique : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}"
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+
+        }
+        ACT= 1
+        ACT {
+            wrapItemAndSub= <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Rubrique selectionée : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}"
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+        }
+        CUR= 1
+        CUR {
+            wrapItemAndSub= <li>|</li>
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Rubrique active : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}"
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+        }
+  }
+}
+
+# ==============================================
+# FE-Plugin configuration for EXT:news
+# ==============================================
+plugin.tx_news {
+	view {
+		templateRootPaths {
+			1 = {$plugin.tx_minisite.news.view.templateRootPath}
+		}
+		partialRootPaths {
+			1 = {$plugin.tx_minisite.news.view.partialRootPath}
+		}
+		layoutRootPaths {
+			1 = {$plugin.tx_minisite.news.view.layoutRootPath}
+		}
+	}
+}
+
+
