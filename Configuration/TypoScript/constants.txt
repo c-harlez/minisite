@@ -1,7 +1,7 @@
 page.fluidtemplate {
-	templateRootPath = EXT:minisite/Resources/Private/Templates/
-	layoutRootPath = EXT:ministe/Resources/Private/Layouts
-	partialRootPath = EXT:minisite/Resources/Private/Partials
+    templateRootPath = EXT:minisite/Resources/Private/Templates/Page/
+    layoutRootPath = EXT:minisite/Resources/Private/Layouts/Page/
+    partialRootPath = EXT:minisite/Resources/Private/Partials/Page/
 }
 # cat:xxxxxxxxxx options[default,amelia,cerulean...]
 minisite.theme.name = default
