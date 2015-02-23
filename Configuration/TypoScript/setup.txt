@@ -112,3 +112,24 @@ plugin.tx_news {
 }
 
 
+# Gabarits
+
+page.10.file.stdWrap.cObject {
+    key.data = levelfield:-1, backend_layout_next_level, slide
+    key.override.field = backend_layout
+  
+    bootstrap_package__default_clean = TEXT
+	bootstrap_package__default_clean.value = typo3conf/ext/minisite/Resources/Private/Templates/Page/minisite_accueil.html
+	bootstrap_package__default_clean.insertData = 1
+  
+	bootstrap_package__default_2_columns = TEXT
+	bootstrap_package__default_2_columns.value = typo3conf/ext/minisite/Resources/Private/Templates/Page/minisite_interieur.html
+	bootstrap_package__default_2_columns.insertData = 1
+  
+    default = TEXT
+	default.value = typo3conf/ext/minisite/Resources/Private/Templates/Page/minisite_interieur.html
+	default.insertData = 1
+}
+
+# Theme
+page.includeCSS.theme = {$minisite.theme.path}{minisite.theme.name}/theme.less
