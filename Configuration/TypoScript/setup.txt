@@ -1,14 +1,14 @@
 # lib.navigation.main
 lib.navigation.main = COA
 lib.navigation.main{
-  1= HMENU
-  1{
+  10= HMENU
+  10{
   
     1 = TMENU
     1 {
         noBlur=1
 
-        wrap = <ul class="nav nav-stacked"><li class="nav-header">Navigation</li>|</ul>
+        wrap = <div class="well"><ul class="nav nav-stacked"><li class="nav-header">Navigation</li>|</ul></div>
         NO {
             wrapItemAndSub= <li>|</li>
             stdWrap.htmlSpecialChars = 1
@@ -123,4 +123,4 @@ page.10.file.stdWrap.cObject {
 }
 
 # Theme
-page.includeCSS.theme = {$minisite.theme.path}{minisite.theme.name}/theme.less
+page.includeCSS.theme = {$minisite.theme.path}{$minisite.theme.name}/theme.less

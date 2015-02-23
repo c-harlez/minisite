@@ -3,6 +3,7 @@ page.fluidtemplate {
     layoutRootPath = EXT:minisite/Resources/Private/Layouts/Page/
     partialRootPath = EXT:minisite/Resources/Private/Partials/Page/
 }
-# cat:xxxxxxxxxx options[default,amelia,cerulean...]
-minisite.theme.name = default
+# cat=Theme: jeu de couleurs/100; type=options[Default=Bootstrap, Amelia=amelia, Cerulean=cerulean, Cosmo=cosmo, Cyborg=cyborg, Darkly=darkly, Flatly=flatly, Journal=journal, Lumen=lumen, Paper=paper, Readable=readable, Sandstonesandstone, Simplex=simplex, Slate=slate, Spacelab=spacelab, Superhero=superhero, United=united, Yeti=yeti]; label=Choix du theme
+minisite.theme.name = Bootstrap
 minisite.theme.path = EXT:minisite/Resources/Private/Less/
+

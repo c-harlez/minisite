@@ -29,6 +29,7 @@ mod {
                                     1 {
                                         name = horaires
                                         colspan = 3
+                                        colPos = 21
                                     }
                                     2 {
                                         name = gauche
