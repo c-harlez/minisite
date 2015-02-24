@@ -8,18 +8,18 @@ mod {
                 title = page accueil
                 config {
                     backend_layout {
-                        colCount = 12
+                        colCount = 4
                         rowCount = 3
                         rows {
                             1 {
                                 columns {
                                     1 {
                                         name = nav
-                                        colspan = 3
+                                        colspan = 1
                                     }
                                     2 {
                                         name = content
-                                        colspan = 9
+                                        colspan = 3
                                         colPos = 0
                                     }
                                 }
@@ -28,26 +28,26 @@ mod {
                                 columns {
                                     1 {
                                         name = horaires
-                                        colspan = 3
-                                        colPos = 21
+                                        colspan = 1
+                                        colPos = 40
                                     }
                                     2 {
                                         name = gauche
-                                        colspan = 3
+                                        colspan = 1
                                         rowspan = 2
-                                        colPos = 22
+                                        colPos = 20
                                     }
                                     3 {
                                         name = milieu
-                                        colspan = 3
+                                        colspan = 1
                                         rowspan = 2
-                                        colPos = 23
+                                        colPos = 21
                                     }
                                     4 {
                                         name = droite
-                                        colspan = 3
+                                        colspan = 1
                                         rowspan = 2
-                                        colPos = 24
+                                        colPos = 22
                                     }
                                 }
                             }
@@ -55,8 +55,8 @@ mod {
                                 columns {
                                     1 {
                                         name = liens
-                                        colspan = 3
-                                        colPos = 31
+                                        colspan = 1
+                                        colPos = 41
                                     }
                                 }
                             }

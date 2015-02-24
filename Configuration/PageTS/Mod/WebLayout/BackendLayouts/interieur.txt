@@ -8,18 +8,18 @@ mod {
                 title = page interieur
                 config {
                     backend_layout {
-                        colCount = 12
+                        colCount = 4
                         rowCount = 3
                         rows {
                             1 {
                                 columns {
                                     1 {
                                         name = nav
-                                        colspan = 3
+                                        colspan = 1
                                     }
                                     2 {
                                         name = content
-                                        colspan = 9
+                                        colspan = 3
                                         rowspan = 3
                                         colPos = 0
                                     }
@@ -29,8 +29,8 @@ mod {
                                 columns {
                                     1 {
                                         name = horaires
-                                        colspan = 3
-                                        colPos = 21
+                                        colspan = 1
+                                        colPos = 40
                                     }
                                 }
                             }
@@ -38,8 +38,8 @@ mod {
                                 columns {
                                     1 {
                                         name = liens
-                                        colspan = 3
-                                        colPos = 31
+                                        colspan = 1
+                                        colPos = 41
                                     }
                                 }
                             }

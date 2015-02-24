@@ -7,3 +7,11 @@ page.fluidtemplate {
 minisite.theme.name = Bootstrap
 minisite.theme.path = EXT:minisite/Resources/Private/Less/
 
+
+plugin.tx_minisite {
+    view {
+        templateRootPaths = EXT:minisite/Resources/Private/Templates/News/
+        partialRootPaths = EXT:minisite/Resources/Private/Partials/News/
+        layoutRootPaths =  EXT:minisite/Resources/Private/Layouts/News/
+   }
+}

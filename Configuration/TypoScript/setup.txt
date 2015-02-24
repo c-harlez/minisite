@@ -1,3 +1,6 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:minisite/Configuration/TypoScript/Less/amelia/constants.txt">
+
+
 # lib.navigation.main
 lib.navigation.main = COA
 lib.navigation.main{
@@ -113,6 +116,8 @@ page.10.file.stdWrap.cObject {
 # Theme
 page.includeCSS.theme = {$minisite.theme.path}{$minisite.theme.name}/theme.less
 
+
+# gestion des glyphicon dans varibales de la page
 lib.pageconfig {
     pageGlyphicon = TEXT
     pageGlyphicon {
