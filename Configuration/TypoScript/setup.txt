@@ -11,34 +11,22 @@ lib.navigation.main{
         wrap = <div class="well"><ul class="nav nav-stacked"><li class="nav-header">Navigation</li>|</ul></div>
         NO {
             wrapItemAndSub= <li>|</li>
+            stdWrap.wrap = <span class="glyphicon glyphicon-{field:icon}"><span>&nbsp;|
+            stdWrap.wrap.insertData=1
             stdWrap.htmlSpecialChars = 1
-            ATagTitle.wrap = Aller à la rubrique : |
+            ATagTitle.wrap = Aller a la rubrique : |
             ATagTitle.field = title
-            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}" 
+            ATagParams = accesskey="{field:tx_accesskey}" 
             ATagParams.insertData = 1
             ATagBeforeWrap = 1
 
         }
+        ACT<.NO
         ACT= 1
         ACT {
-            wrapItemAndSub= <li>|</li>
-            stdWrap.htmlSpecialChars = 1
-            ATagTitle.wrap = Rubrique selectionée : |
-            ATagTitle.field = title
-            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}" 
-            ATagParams.insertData = 1
-            ATagBeforeWrap = 1
+            ATagParams = class="active"
         }
-        CUR= 1
-        CUR {
-            wrapItemAndSub= <li>|</li>
-            stdWrap.htmlSpecialChars = 1
-            ATagTitle.wrap = Rubrique active : |
-            ATagTitle.field = title
-            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}" 
-            ATagParams.insertData = 1
-            ATagBeforeWrap = 1
-        }
+        CUR<.NO
         expAll=1
     }
   }
@@ -61,7 +49,7 @@ lib.navigation.top {
             stdWrap.htmlSpecialChars = 1
             ATagTitle.wrap = Aller à la rubrique : |
             ATagTitle.field = title
-            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}"
+            ATagParams = class="glyphicon glyphicon-{field:pageGlyphicon}" accesskey="{field:tx_accesskey}"
             ATagParams.insertData = 1
             ATagBeforeWrap = 1
 
@@ -72,7 +60,7 @@ lib.navigation.top {
             stdWrap.htmlSpecialChars = 1
             ATagTitle.wrap = Rubrique selectionée : |
             ATagTitle.field = title
-            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}"
+            ATagParams = class="glyphicon glyphicon-{field:pageGlyphicon}" accesskey="{field:tx_accesskey}"
             ATagParams.insertData = 1
             ATagBeforeWrap = 1
         }
@@ -82,7 +70,7 @@ lib.navigation.top {
             stdWrap.htmlSpecialChars = 1
             ATagTitle.wrap = Rubrique active : |
             ATagTitle.field = title
-            ATagParams = class="glyphicon glyphicon-{field:module}" accesskey="{field:tx_accesskey}"
+            ATagParams = class="glyphicon glyphicon-{field:pageGlyphicon" accesskey="{field:tx_accesskey}"
             ATagParams.insertData = 1
             ATagBeforeWrap = 1
         }
@@ -124,3 +112,14 @@ page.10.file.stdWrap.cObject {
 
 # Theme
 page.includeCSS.theme = {$minisite.theme.path}{$minisite.theme.name}/theme.less
+
+lib.pageconfig {
+    pageGlyphicon = TEXT
+    pageGlyphicon {
+        value = default
+        override {
+           required = 1
+           data = levelfield : -1 , pageGlyphicon, slide  
+        }
+    }
+}
