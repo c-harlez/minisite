@@ -1,6 +1,3 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:minisite/Configuration/TypoScript/Less/amelia/constants.txt">
-
-
 # lib.navigation.main
 lib.navigation.main = COA
 lib.navigation.main{
