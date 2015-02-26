@@ -12,7 +12,7 @@
 				<f:if condition="{settings.hidePagination}">
 					<f:then>
 						<f:for each="{news}" as="newsItem" iteration="iterator">
-							<div class="md-col-4">
+							<div class="col-md-4">
 								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 							</div>
 						</f:for>
@@ -20,7 +20,9 @@
 					<f:else>
 						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
 							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								<div class="col-md-4">
+									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</div>
 							</f:for>
 						</n:widget.paginate>
 					</f:else>
