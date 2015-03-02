@@ -77,6 +77,34 @@ lib.navigation.top {
   }
 }
 
+
+lib.navigation.footer >
+lib.navigation.footer = HMENU
+lib.navigation.footer {
+  wrap = | &nbsp;<a href="/rss.xml" class="glyphicon glyphicon-{field:icon}">Flux RSS </a>
+  special = directory
+  special {
+      value = {$page.menu.footer}
+  }
+  1 = TMENU
+  1 {
+    noBlur=1
+    NO = 1
+        NO {
+            wrapItemAndSub= &nbsp; | &nbsp;&#124;
+            stdWrap.htmlSpecialChars = 1
+            ATagTitle.wrap = Aller à la rubrique : |
+            ATagTitle.field = title
+            ATagParams = class="glyphicon glyphicon-{field:icon}" accesskey="{field:tx_accesskey}"
+            ATagParams.insertData = 1
+            ATagBeforeWrap = 1
+        }
+      ACT < .NO
+      CUR < .NO
+  }
+}
+
+
 # ==============================================
 # FE-Plugin configuration for EXT:news
 # ==============================================
