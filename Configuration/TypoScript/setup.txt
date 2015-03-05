@@ -139,7 +139,10 @@ page.10.file.stdWrap.cObject {
 }
 
 # Theme
-page.includeCSS.theme = {$minisite.theme.path}{$minisite.theme.name}/theme.less
+page.includeCSS{
+  bootstrap = EXT:bootstrap_package/Resources/Private/Less/Bootstrap/bootstrap.less
+  theme >
+}
 
 
 # gestion des glyphicon dans varibales de la page
