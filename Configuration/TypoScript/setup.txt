@@ -141,7 +141,7 @@ page.10.file.stdWrap.cObject {
 # Theme
 page.includeCSS{
   bootstrap = EXT:bootstrap_package/Resources/Private/Less/Bootstrap/bootstrap.less
-  theme >
+  theme =
 }
 
 
